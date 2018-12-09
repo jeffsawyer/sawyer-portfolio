@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http';
 /*import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 */
-interface Article {
+/*interface Article {
 	title: string;
 	slug: string;
 	post: string;
 	author_name: string;
 	created_at: string;
 	published_at: string;
-}
+}*/
 
 @Injectable()
 export class ArticleService {
