@@ -4,7 +4,7 @@ import {ArticleService} from './article.service'
 @Component({
 	selector: 'articles',
 	template: `
-		<h2>{{title}}</h2>
+		<h2>{{ title }}</h2>
 		<ul>
 			<li *ngFor="let article of articles">
 				<a href="" title="{{ article.title }}">{{ article.title }}</a>

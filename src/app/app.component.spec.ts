@@ -1,15 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
+import { HttpClientModule } from  '@angular/common/http';
 import { AppComponent } from './app.component';
+import { ArticlesComponent } from './articles.component';
+import { ProjectsComponent } from './projects.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        ArticlesComponent,
+        ProjectsComponent
       ],
     }).compileComponents();
   }));
@@ -20,16 +27,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sawyer-portfolio'`, () => {
+  it(`should have as title 'Jeff Sawyer\'s Portfolio'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('sawyer-portfolio');
+    expect(app.title).toEqual('Jeff Sawyer\'s Portfolio');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to sawyer-portfolio!');
+    expect(compiled.querySelector('h1').textContent).toEqual('Jeff Sawyer\'s Portfolio');
   });
 });
